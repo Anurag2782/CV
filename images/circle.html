@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <canvas id="hello" width="500" height="500" style="border:1px solid #b03636;"> </canvas>
+        <script>
+            var c = document.getElementById("hello");
+            // drawing a circle
+            var cc = c.getContext("2d");
+            cc.beginPath();
+            cc.arc(250, 250, 250, 0, 2 * Math.PI);
+            cc.stroke();
+
+            // drawing a diagonal of a square
+            var ct = c.getContext("2d");
+            ct.moveTo(0, 0);
+            ct.lineTo(500, 500);
+            ct.stroke();
+
+            // writing a hello world
+            var ctx = c.getContext("2d");
+            ctx.font = "30px Arial";
+            // ctx.fillText("Hello World", 180, 250);
+            ctx.strokeText("Hello World", 180, 250);
+
+
+
+
+        </script>
+        <!-- </canvas> -->
+        <canvas class="gradient" width="500" height="500" style="border: 3px solid red">
+            <script>
+                // creating a gradient
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+
+                // Create gradient
+                var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(1, "white");
+
+                // Fill with gradient
+                ctx.fillStyle = grd;
+                ctx.fillRect(10, 10, 150, 80);
+            </script>
+
+            <!-- </script> -->
+    </center>
+</body>
+
+</html>
